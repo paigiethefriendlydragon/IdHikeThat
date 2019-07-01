@@ -1,7 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { Router, browserHistory, Route, IndexRoute } from 'react-router';
+import ParkContainer from './ParkContainer'
 
-export const App = (props) => {
-  return (<h1>Make It So React</h1>)
+const App = props => {
+  return(
+    <Router history={browserHistory}>
+    <Route path='/' component= {ParkContainer}/>
+    <Route path='/parks' component= {ParkContainer}/>
+    </Router>
+  )
 }
 
 export default App
