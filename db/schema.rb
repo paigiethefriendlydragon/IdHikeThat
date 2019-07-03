@@ -10,13 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_01_220730) do
+ActiveRecord::Schema.define(version: 2019_07_02_201727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "campsites", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name"
+    t.string "regulationsurl"
+    t.string "weatheroverview"
+    t.string "campsites"
+    t.string "accessibility"
+    t.string "directionsoverview"
+    t.string "reservationsurl"
+    t.string "directionsUrl"
+    t.string "reservationssitesfirstcome"
+    t.string "regulationsoverview"
+    t.string "latLong"
+    t.string "description"
+    t.string "reservationssitesreservable"
+    t.string "parkCode"
+    t.string "amenities"
+    t.string "reservationsdescription"
   end
 
   create_table "hikes", force: :cascade do |t|
@@ -37,6 +52,7 @@ ActiveRecord::Schema.define(version: 2019_07_01_220730) do
     t.string "directionsUrl"
     t.string "fullName"
     t.string "weatherInfo"
+    t.string "parkCode"
   end
 
   create_table "reviews", force: :cascade do |t|

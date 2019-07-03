@@ -17,20 +17,19 @@ parsed_json["data"].each do |result|
         @description = object.last
       elsif object.first === "designation"
         @designation = object.last
-
       elsif object.first === "directionsInfo"
         @directionsInfo = object.last
-
       elsif object.first === "directionsUrl"
         @directionsUrl = object.last
-
       elsif object.first === "fullName"
          @fullName = object.last
-
       elsif object.first === "weatherInfo"
         @weatherInfo = object.last
+      elsif object.first === "parkCode"
+        @parkCode = object.last
     end
   end
+
   park = Park.create!({
     state: @states,
     latLong: @latLong,
@@ -39,6 +38,282 @@ parsed_json["data"].each do |result|
     directionsInfo: @directionsInfo,
     directionsUrl: @directionsUrl,
     fullName: @fullName,
-    weatherInfo: @weatherInfo
+    weatherInfo: @weatherInfo,
+    parkCode: @parkCode
     })
   end
+
+Campsite.delete_all
+  url= "https://developer.nps.gov/api/v1/campgrounds?limit=250&api_key=#{ENV['NPS_KEY']}"
+  json = open(url).read
+  parsed_json = ActiveSupport::JSON.decode(json)
+  parsed_json["data"].each do |result|
+    result.each do |object|
+      if object.first === "regulationsurl"
+        @regulationsurl = object.last
+        elsif object.first === "regulationsurl"
+          @regulationsurl = object.last
+        elsif object.first === "weatheroverview"
+          @weatheroverview = object.last
+        elsif object.first === "campsites"
+          @campsites = object.last
+        elsif object.first === "accessibility"
+          @accessibility = object.last
+        elsif object.first === "directionsUrl"
+          @directionsUrl = object.last
+        elsif object.first === "wheelchairaccess"
+           @wheelchairaccess = object.last
+        elsif object.first === "internetinfo"
+          @internetinfo = object.last
+        elsif object.first === "rvallowed"
+          @rvallowed = object.last
+        elsif object.first === "cellphoneinfo"
+          @cellphoneinfo = object.last
+        elsif object.first === "rvallowed"
+          @rvallowed = object.last
+        elsif object.first === "firestovepolicy"
+          @firestovepolicy = object.last
+        elsif object.first === "rvmaxlength"
+          @rvmaxlength = object.last
+        elsif object.first === "additionalinfo"
+          @additionalinfo = object.last
+        elsif object.first === "trailermaxlength"
+          @trailermaxlength = object.last
+        elsif object.first === "adainfo"
+          @adainfo = object.last
+        elsif object.first === "rvinfo"
+          @rvinfo = object.last
+        elsif object.first === "accessroads"
+          @accessroads = object.last
+        elsif object.first === "trailerallowed"
+          @trailerallowed = object.last
+        elsif object.first === "classifications"
+          @classifications = object.last
+        elsif object.first === "trailerallowed"
+          @trailerallowed = object.last
+        elsif object.first === "directionsoverview"
+          @directionsoverview = object.last
+        elsif object.first === "trailerallowed"
+          @trailerallowed = object.last
+        elsif object.first === "reservationsurl"
+          @reservationsurl = object.last
+        elsif object.first === "directionsUrl"
+          @directionsUrl = object.last
+        elsif object.first === "regulationsoverview"
+          @regulationsoverview = object.last
+        elsif object.first === "latLong"
+          @latLong = object.last
+        elsif object.first === "description"
+          @description = object.last
+        elsif object.first === "reservationssitesreservable"
+          @reservationssitesreservable = object.last
+        elsif object.first === "parkCode"
+          @parkCode = object.last
+        elsif object.first === "amenities"
+          @amenities = object.last
+        elsif object.first === "reservationsdescription"
+          @reservationsdescription = object.last
+
+      end
+    end
+
+      campsite = Campsite.create!({
+        regulationsurl: @regulationsurl,
+        weatheroverview: @weatheroverview,
+        campsites: @campsites,
+        accessibility: @accessibility,
+        directionsoverview: @directionsoverview,
+        reservationsurl: @reservationsurl,
+        directionsUrl: @directionsUrl,
+        reservationssitesfirstcome: @reservationssitesfirstcome,
+        regulationsoverview: @regulationsoverview,
+        latLong: @latLong,
+        description: @description,
+        reservationssitesreservable: @reservationssitesreservable,
+        parkCode: @parkCode,
+        amenities: @amenities,
+        reservationsdescription: @reservationsdescription
+        })
+      end
+
+      url= "https://developer.nps.gov/api/v1/campgrounds?limit=250&start=251&api_key=#{ENV['NPS_KEY']}"
+      json = open(url).read
+      parsed_json = ActiveSupport::JSON.decode(json)
+      parsed_json["data"].each do |result|
+        result.each do |object|
+          if object.first === "regulationsurl"
+            @regulationsurl = object.last
+            elsif object.first === "regulationsurl"
+              @regulationsurl = object.last
+            elsif object.first === "weatheroverview"
+              @weatheroverview = object.last
+            elsif object.first === "campsites"
+              @campsites = object.last
+            elsif object.first === "accessibility"
+              @accessibility = object.last
+            elsif object.first === "directionsUrl"
+              @directionsUrl = object.last
+            elsif object.first === "wheelchairaccess"
+               @wheelchairaccess = object.last
+            elsif object.first === "internetinfo"
+              @internetinfo = object.last
+            elsif object.first === "rvallowed"
+              @rvallowed = object.last
+            elsif object.first === "cellphoneinfo"
+              @cellphoneinfo = object.last
+            elsif object.first === "rvallowed"
+              @rvallowed = object.last
+            elsif object.first === "firestovepolicy"
+              @firestovepolicy = object.last
+            elsif object.first === "rvmaxlength"
+              @rvmaxlength = object.last
+            elsif object.first === "additionalinfo"
+              @additionalinfo = object.last
+            elsif object.first === "trailermaxlength"
+              @trailermaxlength = object.last
+            elsif object.first === "adainfo"
+              @adainfo = object.last
+            elsif object.first === "rvinfo"
+              @rvinfo = object.last
+            elsif object.first === "accessroads"
+              @accessroads = object.last
+            elsif object.first === "trailerallowed"
+              @trailerallowed = object.last
+            elsif object.first === "classifications"
+              @classifications = object.last
+            elsif object.first === "trailerallowed"
+              @trailerallowed = object.last
+            elsif object.first === "directionsoverview"
+              @directionsoverview = object.last
+            elsif object.first === "trailerallowed"
+              @trailerallowed = object.last
+            elsif object.first === "reservationsurl"
+              @reservationsurl = object.last
+            elsif object.first === "directionsUrl"
+              @directionsUrl = object.last
+            elsif object.first === "regulationsoverview"
+              @regulationsoverview = object.last
+            elsif object.first === "latLong"
+              @latLong = object.last
+            elsif object.first === "description"
+              @description = object.last
+            elsif object.first === "reservationssitesreservable"
+              @reservationssitesreservable = object.last
+            elsif object.first === "parkCode"
+              @parkCode = object.last
+            elsif object.first === "amenities"
+              @amenities = object.last
+            elsif object.first === "reservationsdescription"
+              @reservationsdescription = object.last
+
+          end
+        end
+          campsite = Campsite.create!({
+            regulationsurl: @regulationsurl,
+            weatheroverview: @weatheroverview,
+            campsites: @campsites,
+            accessibility: @accessibility,
+            directionsoverview: @directionsoverview,
+            reservationsurl: @reservationsurl,
+            directionsUrl: @directionsUrl,
+            reservationssitesfirstcome: @reservationssitesfirstcome,
+            regulationsoverview: @regulationsoverview,
+            latLong: @latLong,
+            description: @description,
+            reservationssitesreservable: @reservationssitesreservable,
+            parkCode: @parkCode,
+            amenities: @amenities,
+            reservationsdescription: @reservationsdescription
+            })
+          end
+
+          url= "https://developer.nps.gov/api/v1/campgrounds?limit=50&start=501&api_key=#{ENV['NPS_KEY']}"
+          json = open(url).read
+          parsed_json = ActiveSupport::JSON.decode(json)
+          parsed_json["data"].each do |result|
+            result.each do |object|
+              if object.first === "regulationsurl"
+                @regulationsurl = object.last
+                elsif object.first === "regulationsurl"
+                  @regulationsurl = object.last
+                elsif object.first === "weatheroverview"
+                  @weatheroverview = object.last
+                elsif object.first === "campsites"
+                  @campsites = object.last
+                elsif object.first === "accessibility"
+                  @accessibility = object.last
+                elsif object.first === "directionsUrl"
+                  @directionsUrl = object.last
+                elsif object.first === "wheelchairaccess"
+                   @wheelchairaccess = object.last
+                elsif object.first === "internetinfo"
+                  @internetinfo = object.last
+                elsif object.first === "rvallowed"
+                  @rvallowed = object.last
+                elsif object.first === "cellphoneinfo"
+                  @cellphoneinfo = object.last
+                elsif object.first === "rvallowed"
+                  @rvallowed = object.last
+                elsif object.first === "firestovepolicy"
+                  @firestovepolicy = object.last
+                elsif object.first === "rvmaxlength"
+                  @rvmaxlength = object.last
+                elsif object.first === "additionalinfo"
+                  @additionalinfo = object.last
+                elsif object.first === "trailermaxlength"
+                  @trailermaxlength = object.last
+                elsif object.first === "adainfo"
+                  @adainfo = object.last
+                elsif object.first === "rvinfo"
+                  @rvinfo = object.last
+                elsif object.first === "accessroads"
+                  @accessroads = object.last
+                elsif object.first === "trailerallowed"
+                  @trailerallowed = object.last
+                elsif object.first === "classifications"
+                  @classifications = object.last
+                elsif object.first === "trailerallowed"
+                  @trailerallowed = object.last
+                elsif object.first === "directionsoverview"
+                  @directionsoverview = object.last
+                elsif object.first === "trailerallowed"
+                  @trailerallowed = object.last
+                elsif object.first === "reservationsurl"
+                  @reservationsurl = object.last
+                elsif object.first === "directionsUrl"
+                  @directionsUrl = object.last
+                elsif object.first === "regulationsoverview"
+                  @regulationsoverview = object.last
+                elsif object.first === "latLong"
+                  @latLong = object.last
+                elsif object.first === "description"
+                  @description = object.last
+                elsif object.first === "reservationssitesreservable"
+                  @reservationssitesreservable = object.last
+                elsif object.first === "parkCode"
+                  @parkCode = object.last
+                elsif object.first === "amenities"
+                  @amenities = object.last
+                elsif object.first === "reservationsdescription"
+                  @reservationsdescription = object.last
+              end
+            end
+
+              campsite = Campsite.create!({
+                regulationsurl: @regulationsurl,
+                weatheroverview: @weatheroverview,
+                campsites: @campsites,
+                accessibility: @accessibility,
+                directionsoverview: @directionsoverview,
+                reservationsurl: @reservationsurl,
+                directionsUrl: @directionsUrl,
+                reservationssitesfirstcome: @reservationssitesfirstcome,
+                regulationsoverview: @regulationsoverview,
+                latLong: @latLong,
+                description: @description,
+                reservationssitesreservable: @reservationssitesreservable,
+                parkCode: @parkCode,
+                amenities: @amenities,
+                reservationsdescription: @reservationsdescription
+                })
+              end
