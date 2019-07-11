@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :parks, path: "parks", only: [:index, :show]
   resources :campsites, path: "campsites", only: [:index, :show]
+  resources :hikes, path: "hikes", only: [:index, :show]
 
 
   namespace :api do
@@ -14,6 +15,12 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :campsites, path: "campsites", only: [:index, :show]
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      resources :hikes, path: "hikes", only: [:index, :show]
     end
   end
 
