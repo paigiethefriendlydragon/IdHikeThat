@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_02_201727) do
+ActiveRecord::Schema.define(version: 2019_07_11_025355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,10 +35,21 @@ ActiveRecord::Schema.define(version: 2019_07_02_201727) do
   end
 
   create_table "hikes", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name"
     t.string "difficulty"
-    t.string "description", null: false
-    t.string "conditions", null: false
+    t.string "summary"
+    t.string "location"
+    t.string "imgSqSmall"
+    t.string "imgSmallMed"
+    t.string "imgMedium"
+    t.string "length"
+    t.string "ascent"
+    t.string "descent"
+    t.string "low"
+    t.string "latLong"
+    t.string "conditionStatus"
+    t.string "conditionDetails"
+    t.datetime "conditionDate"
   end
 
   create_table "parks", force: :cascade do |t|
