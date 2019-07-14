@@ -1403,6 +1403,7 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
+
 // $topbar-bg-color: $oil;
 // $topbar-bg: $topbar-bg-color;
 
@@ -1489,3 +1490,6 @@ $include-html-global-classes: $include-html-classes;
 // $include-legacy-visibility-classes: true;
 
 @import 'foundation';
+.top-bar{
+  background-color: #022851;
+}

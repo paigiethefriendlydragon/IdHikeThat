@@ -1,0 +1,59 @@
+.park-title h1{
+  color: #CF8949;
+  background-color: #23456B;
+  border-style: ridge;
+  border-color: white;
+  padding: 1em;
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+}
+
+#park-tile h4{
+  color: #CF8949;
+  background-color: #23456B;
+  border-style: ridge;
+  border-color: white;
+  padding: 1em;
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+}
+#park-show-tile p{
+  color: #CF8949;
+  background-color: #23456B;
+  border-style: ridge;
+  border-color: white;
+  padding: 1em;
+  font-family: 'Slabo 27px', serif;
+}
+
+#park-show-tile{
+  background-color: #022851;
+  margin: 2em;
+  max-width: 27em;
+  position: relative;
+  display: inline-block;
+  align-items: baseline;
+  vertical-align: top;
+  padding: 1em;
+  border-style: ridge;
+  border-color: white;
+}
+#park-show-tile h3{
+  font-size: 2em;
+  color: #CF8949;
+  background-color: #23456B;
+  border-style: ridge;
+  border-color: white;
+  padding: 1em;
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+}
+#park-show-tile h4{
+  color: #CF8949;
+  background-color: #23456B;
+  border-style: ridge;
+  border-color: white;
+  padding: 1em;
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+}
