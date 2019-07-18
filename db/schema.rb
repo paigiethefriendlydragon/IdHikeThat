@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_11_025355) do
+ActiveRecord::Schema.define(version: 2019_07_18_182026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,10 @@ ActiveRecord::Schema.define(version: 2019_07_11_025355) do
     t.string "parkCode"
     t.string "amenities"
     t.string "reservationsdescription"
+    t.string "contacts"
+    t.string "fees"
+    t.string "images"
+    t.string "addresses"
   end
 
   create_table "hikes", force: :cascade do |t|
@@ -50,6 +54,15 @@ ActiveRecord::Schema.define(version: 2019_07_11_025355) do
     t.string "conditionStatus"
     t.string "conditionDetails"
     t.datetime "conditionDate"
+  end
+
+  create_table "hiking_join", force: :cascade do |t|
+    t.bigint "hikes_id", null: false
+    t.bigint "parks_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hikes_id"], name: "index_hiking_join_on_hikes_id"
+    t.index ["parks_id"], name: "index_hiking_join_on_parks_id"
   end
 
   create_table "parks", force: :cascade do |t|

@@ -1,4 +1,3 @@
 class Campsite < ApplicationRecord
 
-
-end
+  end
