@@ -1,0 +1,30 @@
+#hike-tile{
+  background-color: #022851;
+  margin: 2em;
+  max-width: 30em;
+  position: relative;
+  display: inline-block;
+  align-items: baseline;
+  padding: 1em;
+  border-style: ridge;
+  border-color: white;
+}
+
+#hike-tile h1{
+  font-family: 'Luckiest Guy', cursive;
+  color: #CF8949;
+  -webkit-text-stroke: 1px black;
+  font-size: 2em;
+}
+
+#hike-tile p{
+  color: #CF8949;
+  background-color: #23456B;
+  border-style: ridge;
+  border-color: white;
+  padding: 1em;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2em;
+  letter-spacing: .2em;
+  -webkit-text-stroke: 1px black;
+}

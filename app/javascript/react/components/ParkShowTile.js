@@ -25,12 +25,7 @@ const ParkShowTile = props => {
           <p>{props.weatherInfo}</p>
     </div>
 
-    <div id="park-show-tile" className="">
-      <h3 className="index-item">{props.name}</h3>
-      <p>{props.description}</p>
-    </div>
-
-    </div>
+</div>
   )
 }
 
