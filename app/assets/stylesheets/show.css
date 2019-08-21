@@ -1,98 +1,145 @@
-.park-title h1{
-  color: #CF8949;
-  background-color: #23456B;
-  border-style: ridge;
-  border-color: white;
-  padding: 1em;
-  font-family: 'Slabo 27px', serif;
-  text-align: center;
+.park-title{
+  background: url(https://www.texturepalace.com/gallery/wood/0227/5_wood_texture_big_0227.jpg)no-repeat top center;
+	background-size: cover;
+  color: #fff;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	cursor: pointer;
 }
 
-#park-tile h4{
-  color: #CF8949;
-  background-color: #23456B;
-  border-style: ridge;
-  border-color: white;
+.park-title h1{
   padding: 1em;
-  font-family: 'Slabo 27px', serif;
   text-align: center;
-}
-#park-show-tile p{
-  color: #CF8949;
-  background-color: #23456B;
-  border-style: ridge;
-  border-color: white;
-  padding: 1em;
-  font-family: 'Slabo 27px', serif;
+   padding: 1em;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 6em;
+  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke-width: .1em;
+  margin-bottom: 0;
+  line-height: 1em;
+  letter-spacing: .07em;
 }
 
 #park-show-tile{
   background-color: #022851;
   margin: 2em;
-  max-width: 27em;
+  max-width: 40em;
   position: relative;
   display: inline-block;
-  align-items: baseline;
   vertical-align: top;
   padding: 1em;
   border-style: ridge;
   border-color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  overflow-wrap: break-word;
 }
+
+#park-show-tile h1{
+  font-family: 'Luckiest Guy', cursive;
+  color: #CF8949;
+  -webkit-text-stroke: 1px black;
+  font-size: 2em;
+}
+
 #park-show-tile h3{
   font-size: 2em;
+  font-family: 'Luckiest Guy', cursive;
   color: #CF8949;
-  background-color: #23456B;
-  border-style: ridge;
-  border-color: white;
-  padding: 1em;
-  font-family: 'Slabo 27px', serif;
-  text-align: center;
+  -webkit-text-stroke: 1px black;
 }
+
 #park-show-tile h4{
+  font-family: 'Luckiest Guy', cursive;
+  color: #CF8949;
+  -webkit-text-stroke: 1px black;
+}
+
+#park-show-tile p{
   color: #CF8949;
   background-color: #23456B;
+  padding: 1em;
+  font-size: 1em;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#park-show-tile-about{
+  background-color: #022851;
+  margin: 2em;
+  max-width: 40em;
+  position: relative;
+  display: inline-block;
+  padding: 1em;
   border-style: ridge;
   border-color: white;
-  padding: 1em;
-  font-family: 'Slabo 27px', serif;
-  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  overflow-wrap: break-word;
 }
+
+#park-show-tile-about h1{
+  font-family: 'Luckiest Guy', cursive;
+  color: #CF8949;
+  -webkit-text-stroke: 1px black;
+  font-size: 2em;
+}
+
+#park-show-tile-about h3{
+  font-size: 2em;
+  font-family: 'Luckiest Guy', cursive;
+  color: #CF8949;
+  -webkit-text-stroke: 1px black;
+}
+
+#park-show-tile-about h4{
+  font-family: 'Luckiest Guy', cursive;
+  color: #CF8949;
+  -webkit-text-stroke: 1px black;
+}
+
+#park-show-tile-about p{
+  color: #CF8949;
+  background-color: #23456B;
+  padding: 1em;
+  font-size: 1em;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 #campsite-tile{
   background-color: #022851;
   margin: 2em;
-  max-width: 27em;
+  max-width: 20em;
   position: relative;
   display: inline-block;
   align-items: baseline;
-  vertical-align: top;
   padding: 1em;
   border-style: ridge;
   border-color: white;
+  font-family: 'Josefin Sans', sans-serif;
 }
+
+#campsite-tile h1{
+  font-family: 'Luckiest Guy', cursive;
+  color: #CF8949;
+  -webkit-text-stroke: 1px black;
+  font-size: 2em;
+}
+
 #campsite-tile h3{
   font-size: 2em;
+  font-family: 'Luckiest Guy', cursive;
   color: #CF8949;
-  background-color: #23456B;
-  border-style: ridge;
-  border-color: white;
-  padding: 1em;
-  font-family: 'Slabo 27px', serif;
-  text-align: center;
+  -webkit-text-stroke: 1px black;
 }
+
 #campsite-tile h4{
+  font-family: 'Luckiest Guy', cursive;
   color: #CF8949;
-  background-color: #23456B;
-  border-style: ridge;
-  border-color: white;
-  padding: 1em;
-  font-family: 'Slabo 27px', serif;
-  text-align: center;
+  -webkit-text-stroke: 1px black;
 }
+
 #campsite-tile p{
   color: #CF8949;
   background-color: #23456B;
-  border-style: ridge;
-  border-color: white;
   padding: 1em;
-  font-family: 'Slabo 27px', serif;
+  font-size: 1em;
+  font-family: 'Josefin Sans', sans-serif;
 }

@@ -1,14 +1,15 @@
-
-  {
+{
   "name": "IdHikeThat",
   "private": true,
   "engines": {
-      "node": ">=6.0.0",
-      "yarn": ">=0.25.2"
-    },
+    "node": ">=6.0.0",
+    "yarn": ">=0.25.2"
+  },
   "dependencies": {
     "@rails/webpacker": "3.5",
     "babel-preset-react": "~6.24.1",
+    "dotenv": "^8.0.0",
+    "google-maps-react": "^2.0.2",
     "prop-types": "~15.6.0",
     "react": "~15.4.2",
     "react-dom": "~15.4.2",
