@@ -5,7 +5,6 @@ body{
   font-family: 'Slabo 27px', serif;
 }
 
-
 .top-bar-section ul li > a {
   font-size: 1.1rem;
   background-color: #022851 !important;
@@ -33,30 +32,14 @@ p {
   overflow: scroll;
 }
 
-.speech-bubble:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-  border: 20px solid transparent;
-	border-right-color: white;
-  border-right-style: ridge;
-	border-left: 0;
-	border-bottom: 0;
-	margin-top: -10px;
-	margin-left: -20px;
-}
-
 .image-text{
   background: url(https://www.texturepalace.com/gallery/wood/0227/5_wood_texture_big_0227.jpg)no-repeat top center;
 	background-size: cover;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 	cursor: pointer;
-
 }
+
 .speech-bubble h1{
   -webkit-transition: text-shadow 1s ease;
 	text-shadow: 0 0 1px rgba(0,0,0,.1);
@@ -67,8 +50,8 @@ p {
   -webkit-text-stroke-width: .05em;
   margin-bottom: 0;
   line-height: 1em;
-
 }
+
 .speech-bubble h2{
   font-family: 'Luckiest Guy', cursive;
   font-size: 1em;
@@ -84,7 +67,7 @@ p {
   font-size: .4em;
   -webkit-text-stroke: .1px white;
   -webkit-text-stroke-width: .05em;
-  font-family: 'Slabo 27px', serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
   letter-spacing: .07em;
   background-color: #23436A;
@@ -93,7 +76,7 @@ p {
 #park-tile{
   background-color: #022851;
   margin: 2em;
-  max-width: 30em;
+  max-width: 25em;
   position: relative;
   display: inline-block;
   align-items: baseline;
@@ -114,5 +97,5 @@ p {
   border-style: ridge;
   border-color: white;
   padding: 1em;
-  font-family: 'Slabo 27px', serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
